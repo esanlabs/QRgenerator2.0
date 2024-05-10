@@ -151,6 +151,7 @@ input:checked + .slider:before {
       width: 90%; /* Reducir el ancho del contenedor para pantallas más pequeñas */
       margin: 3% auto; /* Reducir los márgenes para pantallas más pequeñas */
       padding: 10px;
+      height: 600px;
     }
 
     .input[type = "text"]{
