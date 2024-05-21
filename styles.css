@@ -210,6 +210,15 @@ input:checked + .slider:before {
     color: #333333;
 }
 
+ .contMensaje {
+    position: absolute;
+    bottom: 0;
+    margin-top: 50%;
+    
+}
+
+
+
 @media screen and (max-width: 768px) {
     .container {
       width: 90%; /* Reducir el ancho del contenedor para pantallas más pequeñas */
@@ -244,6 +253,13 @@ input:checked + .slider:before {
         margin-right: 35px;
         
     }
+
+    input[type="text"]{
+        margin : 5px;
+        
+    }
+
+    
 
     
   }

@@ -27,11 +27,13 @@ function generarQR() {
         var bGenerar = document.getElementById("buttonGenerar");
         var bDescargar = document.getElementById("buttonDescargar");    
         var switcher = document.getElementById("switcherContainer");
+        var f = document.getElementById("frase")
 
         inputURL.style.display = "none";
         bGenerar.style.display = "none";
         bDescargar.style.display = "block";
         switcher.style.display = "block";
+        f.style.display = "none";
     }, 1500); // 2000 milisegundos = 2 segundos
     /*
     //Ahora preparo.
