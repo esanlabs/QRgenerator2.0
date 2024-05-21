@@ -240,5 +240,10 @@ input:checked + .slider:before {
         
     }
 
+    #switcherContainer {
+        margin-right: 35px;
+        
+    }
+
     
   }
