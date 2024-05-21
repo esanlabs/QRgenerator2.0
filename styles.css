@@ -143,17 +143,17 @@ input[type="text"] {
 
  
 input:checked + .slider {
-    background-color: #cfd4d8;
+    background-color: #c5e4fb;
     
 }
  
 input:focus + .slider {
-    box-shadow: 0 0 1px #cfd4d8;
+    box-shadow: 0 0 1px #95999c;
 }
  
 input:checked + .slider:before {    
     transform: translateX(30px);
-    content: "si";
+    content: "sí";
     
 }
  
@@ -172,7 +172,7 @@ input:checked + .slider:before {
 #qrContainer {
     position: relative;
     transform: scale(0.7); /* Reduce el tamaño a la mitad */
-    top: -50px; /* Mueve el contenedor hacia arriba 20 píxeles */
+    top: -50px; /* Mueve el contenedor hacia arriba 50 píxeles */
     padding-bottom: 10px;
 }
 
