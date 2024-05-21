@@ -2,7 +2,9 @@
 body {
     margin: 0;
     padding: 0;
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 35%, rgba(211,211,211,1) 100%);
+    /*background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 35%, rgba(211,211,211,1) 100%);*/
+    background-image: url("fondo.png");
+    background-size: 100% 100%;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -18,8 +20,7 @@ body {
 .container {
     align-items: center;
     text-align: center;
-    background-color: #004AAD;
-    border: 2px solid black;
+    background-color: #3fa7f3;
     border-radius: 40px;
     padding: 20px;
     height: 525px;
@@ -40,12 +41,37 @@ input[type="text"] {
     width: 300px;
     padding: 10px;
     margin-bottom: 10px;
+    border: none;
 }
  
-button {
-    padding: 10px 20px;
-    background-color: #3fa9f5;
+.boton1 {
+    padding: 21px 81px;
     color: #fff;
+    background-image: url("BOTON_GENERAR.png");
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.boton2 {
+    padding: 20px 72px;
+    background-image: url("BOTON_REINICIAR.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-size: cover;
+
+}
+
+.boton3 {
+    padding: 21px 72px;
+    background-image: url("BOTON_DESCARGAR.png");
+    background-repeat: no-repeat;
+    background-position: center;
     border: none;
     cursor: pointer;
     margin-top: 10px;
@@ -56,7 +82,7 @@ button {
     align-items: center;
     position: relative;
     display: inline-block;
-    margin: 5%px;
+    /*margin: 5%px;*/
     /* Ajuste para la posición absoluta de picCenter */
     position: relative;
 }
@@ -71,12 +97,15 @@ button {
     align-items: center;
 }
  
+.reiniciarContainer{
+    margin:-110px;
+}
 .switch {
-    position: relative;
+    position:relative;
     display: inline-block;
     width: 60px;
     height: 34px;
-    margin-top: 10px;
+/*   margin-top: 10px;   */
 }
  
 .switch input {
@@ -84,7 +113,8 @@ button {
     width: 0;
     height: 0;
 }
- 
+
+
 .slider {
     position: absolute;
     cursor: pointer;
@@ -100,32 +130,39 @@ button {
 .slider:before {
     position: absolute;
     content: "no";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    align-content: center;
+    height: 33px;
+    width: 33px;
+    left: -3px;
+    bottom: 1px;
     background-color: white;
     transition: .4s;
     border-radius: 50%;
+    color: #3fa7f3;
 }
 
  
 input:checked + .slider {
-    background-color: #3fa9f5;
+    background-color: #cfd4d8;
     
 }
  
 input:focus + .slider {
-    box-shadow: 0 0 1px #3fa9f5;
+    box-shadow: 0 0 1px #cfd4d8;
 }
  
-input:checked + .slider:before {
-    transform: translateX(26px);
+input:checked + .slider:before {    
+    transform: translateX(30px);
     content: "si";
+    
 }
  
 #switcherContainer {
     text-align: center;
+    display: inline-flex;
+    margin-right: 70px;
+    font-family: 'DIN Next Rounded LT Pro', sans-serif;
+    font-weight: bold;
 }
  
 #switcherContainer .switch {
@@ -136,14 +173,41 @@ input:checked + .slider:before {
     position: relative;
     transform: scale(0.7); /* Reduce el tamaño a la mitad */
     top: -50px; /* Mueve el contenedor hacia arriba 20 píxeles */
+    padding-bottom: 10px;
 }
 
+#switcherContainer p {
+    color: white;
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+    margin-right: 10px; /* Añade espacio entre el párrafo y el switch */
+    margin-left: 65px;
+}
+
+#switcherContainer label{
+    font-family: 'DIN Next Rounded LT Pro', sans-serif;
+    top:-10px;
+}
  
 #picCenter {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@font-face {
+    font-family: 'DIN Next Rounded LT Pro';
+    src: url('fonts/DINNextRoundedLTPro-Light.woff2') format('woff2'),
+         url('fonts/DINNextRoundedLTPro-Light.woff') format('woff');
+    font-weight: 300; /* Light */
+    font-style: normal;
+}
+
+.urlInput{
+    font-family: 'DIN Next Rounded LT Pro', sans-serif;
+    font-weight: 300; /* Light */
+    font-size: 16px;
+    color: #333333;
 }
 
 @media screen and (max-width: 768px) {
