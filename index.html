@@ -6,46 +6,47 @@
     <title>Generador de Código QR</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body >
-    <div class="background" >
+<body>
+    <div class="background">
         <div class="container">
             <div class="logoCont">
                 <img src="LOGOTIPO.png" alt="Logo QR" id="logo">
             </div>
             <div class="eslogan">
-                <p style="font-size: 12px; color: #c5e4fb; margin-top: 8px; ">_______________________________________</p>
+                <p style="font-size: 12px; color: #c5e4fb; margin-top: 8px;">_______________________________________</p>
             </div>
             <div id="switcherContainer" style="display: none;">
-                <p style="color: white;display: inline-block;margin-top: 10px;">Logo de ESAN</p>
+                <p style="color: white;display: inline-block;margin-top: 10px;">Personalizar QR</p>
                 <label class="switch">
                     <input type="checkbox" id="switcher" onclick="toggleArbol()">
                     <span class="slider"></span>
                 </label>
+                     <input type="file" id="imageInput" accept="image/*" style="display: none;" onchange="loadImage(event)">
+                     <p id="fileFormatInfo" style="display: none;">        Formatos permitidos: png, jpg y jpeg.<br>
+                        Dimensiones recomendadas: 45px de alto y ancho.</p>
             </div>
             <div class="input-container" style="margin-top: 10px;">
-                <input type="text" id="urlInput" placeholder="Ingresa la URL..." >
+                <input type="text" id="urlInput" placeholder="Ingresa la URL...">
                 <button id="buttonGenerar" class="boton1" onclick="generarQR()"></button>
                 <button id="buttonDescargar" class="boton3" onclick="descargar()" style="display: none;"></button>
             </div>
-            <div id="qrContainer" style="display: none">
+            <div id="qrContainer" style="display: none;">
                 <div id="qrCont" class="qr-container">
                     <img id="qrCodeImg" src="" alt="QR Code">
-                    <canvas id="miCanvas" width="300" height="300" style="display: none"></canvas>
-                    <img id="picCenter" src="arbol.png" alt="Center Image" style="display: none">
+                    <canvas id="miCanvas" width="300" height="300" style="display: none;"></canvas>
+                    <img id="picCenter" src="arbol.png" alt="Center Image" style="display: none;">
                 </div>
             </div>
-            <div class="reiniciarContainer" id="reiniciarContainer" style="display: none;margin: -110px;">
-                <p style="font-size: 12px; color: #c5e4fb; margin: 4px; ">_______________________________________</p>
-                <button id= "buttonReiniciar" class="boton2" onclick="reiniciar()"></button>
+            <div class="reiniciarContainer" id="reiniciarContainer" style="display: none; margin: -110px;">
+                <p style="font-size: 12px; color: #c5e4fb; margin: 4px;">_______________________________________</p>
+                <button id="buttonReiniciar" class="boton2" onclick="reiniciar()"></button>
             </div>
-
             <div class="frase" id="frase">
-                <p style="font-size: 12px; color: #c5e4fb; margin-top: 300px; ">un aplicativo de ESAN Labs </p>
+                <p style="font-size: 15px; color: #c5e4fb; margin-top: 350px;">un aplicativo de ESAN Labs</p>
             </div>
         </div>
-     
-        <div class="frase" >
-            <p style="font-size: 12px; color: #c5e4fb; margin-top: 5%; margin-left: 45%;">v.1.2.7</p>
+        <div class="frase">
+            <p style="font-size: 13px; color: #c5e4fb; margin-top: 5%; margin-left: 45%;">v.2.1.3</p>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>

@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -19,12 +18,14 @@ body {
 }
  
 .container {
-    align-items: center;
+    align-items:center;
     text-align: center;
     background-color: #3fa7f3;
     border-radius: 40px;
     padding: 20px;
-    height: 525px;
+    height: 620px;
+
+    
 }
 
  
@@ -225,7 +226,7 @@ input:checked + .slider:before {
       width: 90%; /* Reducir el ancho del contenedor para pantallas más pequeñas */
       margin: 3% auto; /* Reducir los márgenes para pantallas más pequeñas */
       padding: 10px;
-      height: 600px;
+      height: 650px;
     }
 
     .input[type = "text"]{
@@ -260,7 +261,28 @@ input:checked + .slider:before {
         
     }
 
-    
 
+}
+
+#imageInput {
+    display: block; /* Asegura que el input se comporte como un bloque */
+    margin: 0 auto; /* Centra horizontalmente dentro del contenedor */
+    background-color: #f3f3f3; /* Fondo gris claro */
+    color: black; /* Texto negro */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño del texto */
+    border: 1px solid #ccc; /* Borde delgado */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano */
+    width: auto; /* Ajusta el tamaño al contenido */
+    align-items: center;
+    margin-left: 66px;
+    transform: scale(0.9);
+}
+
+#fileFormatInfo {
+    font-size: 10px; /* Texto pequeño */
+    color: white; /* Texto en color blanco */
+    text-align: center; /* Centra el texto horizontalmente */
+}
     
-  }
